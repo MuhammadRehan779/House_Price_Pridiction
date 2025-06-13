@@ -35,8 +35,7 @@ with open('house_price_prediction.pkl', 'rb') as f:
         output = round(prediction[0],2)
         
         return render_template('index.html', prediction_text=f"prediction Price: {output}")
-   
-   
-    if _name_ == "_main_":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+    
+    if __name__ == "__main__":
+        port = int(os.environ.get("PORT", 5000))
+        app.run(host="0.0.0.0", port=port)
